@@ -109,11 +109,7 @@ function pickOneBottle(info, callback) {
 		}
 		// 根据请求瓶子类型到不同数据库中查找
 		// 男生: 0, 女生: 1
-		let { type } = info
-		if (type == 2) {
-			type = Math.round(Math.random())
-		}
-		client.SELECT(type, function () {
+		client.SELECT(info.type, function () {
 			// 随机返回一个漂流瓶 id
 			client.RANDOMKEY(function (err, bottleId) {
 				if (err) {

@@ -221,7 +221,7 @@ $(document).ready(function () {
 	$('#pickBtn').click(function () {
 		var pickName = $('#pick-name').val(),
 			pickType = $('#pick-type option:selected').val()
-		console.log('pickName: ' + pickName + ' pickType: ' + pickType)
+		// console.log('pickName: ' + pickName + ' pickType: ' + pickType)
 		$.ajax({
 			type: 'get',
 			url: '/pick.do',
